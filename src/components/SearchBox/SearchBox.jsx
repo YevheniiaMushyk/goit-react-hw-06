@@ -10,6 +10,7 @@ const SearchBox = ({ searchValue, setSearchValue }) => {
 				onChange={(evt) => setSearchValue(evt.target.value)}
 				placeholder="Type a name for search"
 				value={searchValue}
+				spellCheck="true"
 			/>
 		</div>
 	);
