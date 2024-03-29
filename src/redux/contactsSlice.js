@@ -26,17 +26,9 @@ const contactsSlice = createSlice({
 			const index = state.findIndex((contact) => contact.id === action.payload);
 			state.splice(index, 1);
 		},
-		selectContacts(state, action) {
-			// for (const task of state) {
-			// 	if (task.id === action.payload) {
-			// 		task.completed = !task.completed;
-			// 		break;
-			// 	}
-			// }
-		},
 	},
 });
 
 // Експортуємо генератори екшенів та редюсер
-export const { addContact, deleteContact, selectContacts } = contactsSlice.actions;
-export const contactReduser = contactsSlice.reducer;
+export const { addContact, deleteContact } = contactsSlice.actions;
+export const contactReducer = contactsSlice.reducer;
